@@ -1,0 +1,16 @@
+<!-- ask.html.erb -->
+
+<div class="text-center">
+  <h1 class="mb-4">Ask your stupid question !</h1>
+
+  <%= form_with(url: '/answer', method: 'get', class: 'w-50 mx-auto') do |form| %>
+    <div class="mb-3">
+      <%= form.label :question, 'Ask your question', class: 'form-label' %>
+      <%= form.text_field :question, class: 'form-control', placeholder: 'Example: What you gonna do when they come for you ?' %>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <%= form.submit 'Ask!', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
